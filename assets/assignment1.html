@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style1.css">
+
+    
+</head>
+
+<body>
+    <div>
+        <div class="header-blue">
+            <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                <div class="container"><a class="navbar-brand" href="#">CloudVandana Solutions Assignment</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse"
+                        id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" >Home </a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="assets/assignment2.html" >Assignment 2 </a></li>
+                             
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" href="https://drive.google.com/file/d/1VX6fhAKkfKLpmgnWSSosjOYCwTU0Acyj/view?usp=sharing" target="_blank">Resume</a></li>
+                               
+                        </ul>
+                        <span class="navbar-text"> <a href="#" target="_blank" class="login">Github</a></span>
+						<a class="btn btn-light action-button" role="button" href="https://www.linkedin.com/in/shrikaanth-shyamsunder-8a82631b0/" target="_blank">LinkedIn</a></div>
+                </div>
+            </nav>
+</div>
+</div>
+<section id="sector1">
+<div class="container hero">
+    <center>
+    <h1 >Assignment1 Solution</h1>
+</center>
+    <div class="row">
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="card rounded-0 border-0 shadow">
+                        <div class="card-body p-5">
+                            
+                            <!--  Bootstrap table-->
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">S.NO</th>
+                                            <th scope="col"> Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">DOB</th>
+                                            <th scope="col">Occ</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>shrikaanth</td>
+                                            <td>shri@gmail.co</td>
+                                            <td>M</td>
+                                            <td>25/12/2000</td>
+                                            
+                                            <td>Student</td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <th scope="row">2</th>
+                                            <td>Thor</td>
+                                            <td>Thor@gmail.co</td>
+                                            <td>M</td>
+                                            <td>26/11/2001</td>
+                                            
+                                            <td>Student</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            
+                                            <th scope="row">3</th>
+                                            <td>Iron Man</td>
+                                            <td>istriwala@gmail.co</td>
+                                            <td>M</td>
+                                            <td>2/10/1998</td>
+                                            
+                                            <td>Student</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            
+                                            <th scope="row">4</th>
+                                            <td>Hulk</td>
+                                            <td>harabara@gmail.co</td>
+                                            <td>M</td>
+                                            <td>25/12/1000</td>
+                                            
+                                            <td>Student</td>
+                                        </tr>
+
+                                        
+                                        <tr>
+                                            
+                                            <th scope="row">5</th>
+                                            <td>Loki</td>
+                                            <td>bottlegourd@gmail.co</td>
+                                            <td>M</td>
+                                            <td>25/12/2000</td>
+                                            
+                                            <td>Student</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+        
+                            <!-- Add rows button-->
+                            <a class="btn btn-primary rounded-0 btn-block" id="insertRow">Add new row</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+</body>
+</html>
+
+
+<script  >
+    $(function () {
+
+// Start counting from the third row
+var counter = 6;
+
+$("#insertRow").on("click", function (event) {
+    event.preventDefault();
+
+    var newRow = $("<tr>");
+    var cols = '';
+
+    // Table columns
+    cols += '<th scrope="row">' + counter + '</th>';
+    cols += '<td><input class="form-control rounded-0" type="text" name="firstname" placeholder="Name"></td>';
+    cols += '<td><input class="form-control rounded-0" type="text" name="Email" placeholder="Email"></td>';
+    cols += '<td><input class="form-control rounded-0" type="text" name="Gender" placeholder="Gender"></td>';
+    
+    cols += '<td><input class="form-control rounded-0" type="text" name="DOB" placeholder="dob"></td>';
+    
+    cols += '<td><input class="form-control rounded-0" type="text" name="occu" placeholder="occupation"></td>';
+    cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
+
+    // Insert the columns inside a row
+    newRow.append(cols);
+
+    // Insert the row inside a table
+    $("table").append(newRow);
+
+    // Increase counter after each row insertion
+    counter++;
+});
+
+// Remove row when delete btn is clicked
+$("table").on("click", "#deleteRow", function (event) {
+    $(this).closest("tr").remove();
+    counter -= 1
+});
+});
+</script>
